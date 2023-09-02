@@ -3,7 +3,7 @@ import torch
 import unip
 from unip.core.pruner import BasePruner
 from unip.utils.evaluation import *
-from test_unip.models.template_model import ExampleModel
+from test_unip.models.example_model import ExampleModel
 
 
 def test_inference():

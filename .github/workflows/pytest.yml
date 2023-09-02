@@ -1,6 +1,9 @@
 name: test the pull request
 
 on:
+  push:
+    branches: 
+      - main
   pull_request_target:
     branches: 
       - main
@@ -31,11 +34,9 @@ jobs:
             # if file name is `tests/test_*.py`
             if [[ $file == tests/test_*.py ]]; then
               echo "$file was changed"
-              requirements=${file%.*}_requirements.txt
-              if [[ -f $requirements ]]; then
-                echo "$requirements was found, installing the requirements"
-                pip install -r $requirements
-              fi
+              # requirements file name is  `requirements/*_requirements.txt`
+              requirements_file_name=$(echo $file | sed -e "s/tests\/test_\(.*\).py/requirements\/\1_requirements.txt/")
+              pip install -r $requirements_file_name
               # run pytest
               pytest $file::test_inference
               # if the test is not succeed, exit with -1

@@ -1,2 +1,3 @@
 pytest
 UniP @ git+https://github.com/Nobreakfast/UniP@main
+test_UniP @ git+https://github.com/Nobreakfast/test_UniP@main
