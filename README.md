@@ -1,5 +1,5 @@
 # test_UniP
-This repository aimed to provide the test models and test the pytorch pruning framework. 
+This repository aimed to provide the test models and test the pytorch pruning framework [UniP](https://github.com/Nobreakfast/UniP.git). 
 
 ## Introduction
 This repository is based on the [UniP](https://github.com/Nobreakfast/Unip), and help users of UniP to test the pruning framework. If you could not run the UniP with your own models, you should pull a request to this repository. Let's fix your problems and make UniP better.
